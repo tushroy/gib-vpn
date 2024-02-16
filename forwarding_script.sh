@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Get environment variables
+LISTEN_PORT="${LISTEN_PORT:-3389}"
+DESTINATION_IP="${DESTINATION_IP:-127.0.0.1}"
+DESTINATION_PORT="${DESTINATION_PORT:-3389}"
+
+# Start socat to listen on LISTEN_PORT and forward traffic to DESTINATION_IP:DESTINATION_PORT
+socat TCP-LISTEN:"$LISTEN_PORT",fork,reuseaddr TCP:"$DESTINATION_IP":"$DESTINATION_PORT"
