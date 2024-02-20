@@ -7,7 +7,7 @@ RUN apk update && apk add --no-cache \
     expect \
     openconnect \
     socat && \
-	rm -rf /var/cache/apk/*
+    rm -rf /var/cache/apk/*
 
 COPY hipreport.sh .
 COPY gib-vpn-script.sh .
