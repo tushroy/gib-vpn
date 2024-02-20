@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Get environment variables
 LISTEN_PORT="${LISTEN_PORT:-3389}"
