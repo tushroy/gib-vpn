@@ -93,7 +93,7 @@ esac
 
 # If default/made-up values are not accepted, these values may need to be extracted from the
 # HIP report sent by an official GlobalProtect client.
-HOST_ID="deadbeef-dead-beef-dead-beefdeadbeef"
+HOST_ID="7c2ba970-0779-42e3-adb1-701062dc2edc"
 if [ -z "$APP_VERSION" ]; then APP_VERSION=5.1.5-8; fi
 
 # Timestamp in the format expected by GlobalProtect server

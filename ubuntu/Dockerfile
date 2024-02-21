@@ -12,11 +12,13 @@ RUN apt-get update \
 	socat
 
 COPY hipreport.sh .
+COPY vpnc-script.sh .
 COPY gib-vpn-script.sh .
 COPY forwarding_script.sh .
 COPY run_both.sh .
 
 RUN chmod +x hipreport.sh
+RUN chmod +x vpnc-script.sh
 RUN chmod +x gib-vpn-script.sh
 RUN chmod +x forwarding_script.sh
 RUN chmod +x run_both.sh
