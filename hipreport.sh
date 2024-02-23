@@ -84,8 +84,8 @@ case $CLIENTOS in
 	*)
 		OS="Microsoft Windows 10 Pro , 64-bit"
 		OS_VENDOR="Microsoft"
-		NETWORK_INTERFACE_NAME="{DEADBEEF-DEAD-BEEF-DEAD-BEEFDEADBEEF}"
-		NETWORK_INTERFACE_DESCRIPTION="PANGP Virtual Ethernet Adapter #2"
+		NETWORK_INTERFACE_NAME="{58417AE2-B580-4FA1-97B6-F3CF29105926}"
+		NETWORK_INTERFACE_DESCRIPTION="PANGP Virtual Ethernet Adapter"
 		# Many VPNs seem to require trailing backslash, others don't accept it
 		ENCDRIVE='C:\\'
 		;;
@@ -125,7 +125,7 @@ cat <<EOF
 			<network-interface>
 				<entry name="$NETWORK_INTERFACE_NAME">
 					<description>$NETWORK_INTERFACE_DESCRIPTION</description>
-					<mac-address>01-02-03-00-00-01</mac-address>
+					<mac-address>02-50-41-00-00-01</mac-address>
 					<ip-address>
 						<entry name="$IP"/>
 					</ip-address>
