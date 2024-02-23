@@ -7,6 +7,7 @@ services:
       - GIB_VPN_USERNAME=
       - GIB_VPN_PASSWORD=
       - GIB_VPN_SERVER=
+      - APP_VERSION=6.1.3-703
       - LISTEN_PORT=3389
       - DESTINATION_IP=
       - DESTINATION_PORT=3389
