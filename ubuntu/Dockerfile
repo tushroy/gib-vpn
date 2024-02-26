@@ -8,8 +8,7 @@ RUN apt-get update \
     && apt-get install -y \
     expect \
     openconnect \
-    libwrap0 \
-	socat
+    iptables
 
 COPY hipreport.sh .
 COPY vpnc-script.sh .

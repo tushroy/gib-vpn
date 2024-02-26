@@ -5,7 +5,7 @@ ENV HOSTNAME=alpine-gib-vpn
 RUN apk update && apk add --no-cache \
     expect \
     openconnect \
-    socat && \
+    iptables && \
     rm -rf /var/cache/apk/*
 
 COPY hipreport.sh .
