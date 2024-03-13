@@ -5,7 +5,8 @@ ENV HOSTNAME=alpine-gib-vpn
 RUN apk update && apk add --no-cache \
     expect \
     openconnect \
-    iptables && \
+    iptables \
+	tini && \
     rm -rf /var/cache/apk/*
 
 COPY hipreport.sh .
@@ -20,4 +21,4 @@ RUN chmod +x gib-vpn-script.sh
 RUN chmod +x forwarding_script.sh
 RUN chmod +x run_both.sh
 
-ENTRYPOINT ["./run_both.sh"]
+ENTRYPOINT ["/sbin/tini", "-s", "./run_both.sh"]

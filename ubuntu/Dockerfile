@@ -8,7 +8,8 @@ RUN apt-get update \
     && apt-get install -y \
     expect \
     openconnect \
-    iptables
+    iptables \
+	tini 
 
 COPY hipreport.sh .
 COPY vpnc-script.sh .
@@ -22,4 +23,4 @@ RUN chmod +x gib-vpn-script.sh
 RUN chmod +x forwarding_script.sh
 RUN chmod +x run_both.sh
 
-ENTRYPOINT ["./run_both.sh"]
+ENTRYPOINT ["/usr/bin/tini", "-s", "./run_both.sh"]
